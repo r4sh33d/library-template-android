@@ -39,7 +39,7 @@ publish {
   bintrayKey = key
   userOrg = 'drummer-aidan'
   groupId = 'com.afollestad'
-  artifactId = artifactName
+  artifactId = 'library-template'
   publishVersion = versions.publishVersion
   desc = 'A cool library to do something cool!'
   website = 'https://github.com/afollestad/library-template'

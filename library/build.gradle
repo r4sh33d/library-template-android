@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply from: '../dependencies.gradle'
 
-ext.artifactName = 'librarytemplate'
 apply from: '../bintrayconfig.gradle'
 
 android {
