@@ -29,5 +29,4 @@ But there are some pre-requisites:
 the new library's matching details.
 2. Add `bintray.user` and `bintray.apikey` entries to `local.properties` matching your own 
 Bintray account.
-3. With each release, update the version name and code in [dependencies.gradle](dependencies.gradle) 
-and update [RELEASE_NOTES.md](RELEASE_NOTES.md).
+3. With each release, update the version name and code in [dependencies.gradle](dependencies.gradle).
