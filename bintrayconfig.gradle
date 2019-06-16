@@ -13,9 +13,7 @@ def getBintrayUserAndKey() {
   ]
 }
 
-if (artifactName == null) {
-  throw new IllegalStateException("Must specify a artifactName in module's build.gradle")
-} else if (versions == null || versions.publishVersion == null) {
+if (versions == null || versions.publishVersion == null) {
   throw new IllegalStateException("Unable to reference publishVersion")
 }
 
