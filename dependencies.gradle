@@ -19,5 +19,6 @@ ext.versions = [
     junit             : '4.12',
     robolectric       : '4.3',
     mockito           : '2.28.2',
-    mockitoKotlin     : '2.1.0'
+    mockitoKotlin     : '2.1.0',
+    truth             : '0.45'
 ]
