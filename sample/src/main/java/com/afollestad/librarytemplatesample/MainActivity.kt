@@ -19,39 +19,30 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import com.afollestad.librarytemplate.ActionManager
-import kotlinx.coroutines.Dispatchers
+import androidx.appcompat.app.AlertDialog
+import com.afollestad.librarytemplate.Greeter
 
 class MainActivity : AppCompatActivity() {
-  lateinit var textView: TextView
-
-  private var actionManager: ActionManager? = null
-  private var index: Int = 0
+  lateinit var inputView: TextView
+  private var greeter: Greeter? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    textView = findViewById(R.id.textView)
-    actionManager = ActionManager(
-        mainContext = Dispatchers.Main,
-        ioContext = Dispatchers.IO
-    )
+    inputView = findViewById(R.id.inputView)
+    greeter = Greeter(this)
 
     findViewById<Button>(R.id.buttonView).onClickDebounced {
-      actionManager?.doSomething(
-          action = { ++index },
-          onDone = { result ->
-            val text = "${textView.text} $result"
-            textView.text = text
-          }
-      )
+      AlertDialog.Builder(this)
+          .setMessage(greeter?.greet(inputView.text.toString()))
+          .show()
     }
   }
 
   override fun onDestroy() {
-    actionManager?.dispose()
-    actionManager = null
+    greeter?.dispose()
+    greeter = null
     super.onDestroy()
   }
 }

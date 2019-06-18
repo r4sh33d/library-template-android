@@ -15,12 +15,18 @@
  */
 package com.afollestad.librarytemplate
 
-import com.google.common.truth.Truth.assertThat
-import org.junit.Test
+import android.content.Context
+import androidx.annotation.VisibleForTesting
 
-class ExampleTest {
+/** @author Aidan Follestad (@afollestad) */
+class Greeter(
+  @VisibleForTesting var context: Context?
+) {
+  /** Greets someone with the given [name]. */
+  fun greet(name: String): String = context?.resources?.getString(R.string.hello_x, name) ?: ""
 
-  @Test fun test1() {
-    assertThat(true).isTrue()
+  /** Releases the [context]. */
+  fun dispose() {
+    context = null
   }
 }

@@ -32,7 +32,6 @@ dependencies {
   api 'androidx.appcompat:appcompat:' + versions.androidx
 
   api 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:' + versions.kotlin
-  api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:' + versions.coroutines
 
   testImplementation 'org.robolectric:robolectric:' + versions.robolectric
   testImplementation 'junit:junit:' + versions.junit
