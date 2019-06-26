@@ -9,11 +9,15 @@ libraries.
 ./gradlew spotlessApply
 ```
 
+*Make sure you update [spotless.license.kt](spotless.license.kt) and [LICENSE.md](LICENSE.md) to reflect your own license and author info!* Other settings for this plugin can be tweaked in [spotless.gradle](spotless.gradle).
+
 ### Check if Dependencies Are Up-to-Date
 
 ```gradle
 ./gradlew dependencyUpdates
 ```
+
+Settings can be tweaked for this plugin within [versionsPlugin.gradle](versionsPlugin.gradle).
 
 ### Publishing the Library to Bintray -> jCenter
 

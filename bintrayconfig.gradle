@@ -50,6 +50,7 @@ def getPackage() {
   if (pkg == null || pkg == '') {
     throw new Error('Got an empty package!')
   }
+  return pkg
 }
 
 ext.getPackage = this.&getPackage
