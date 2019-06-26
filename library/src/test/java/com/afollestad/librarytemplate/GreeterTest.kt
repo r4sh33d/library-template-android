@@ -28,7 +28,7 @@ import org.junit.Test
 class GreeterTest {
   private val resources = mock<Resources> {
     on { getString(eq(R.string.hello_x), isA()) } doAnswer { inv ->
-      val name: String = inv.getArgument(0)
+      val name: String = inv.getArgument(1)
       "Hello, $name!"
     }
   }
