@@ -24,7 +24,7 @@ Settings can be tweaked for this plugin within [versionsPlugin.gradle](versionsP
 Just have to execute:
 
 ```gradle
-./gradlew bintrayUpload
+./gradlew clean build bintrayUpload
 ```
 
 But there are some pre-requisites:
