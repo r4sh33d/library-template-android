@@ -1,7 +1,6 @@
-# Library Template
+# Library Template (ANDROID)
 
-This repository can be used as a template to create new GitHub repositories for Kotlin/Android 
-libraries.
+This repository can be used as a template to create new GitHub repositories for Kotlin/Android libraries.
 
 ### Code Formatting
 
