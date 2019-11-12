@@ -23,10 +23,10 @@ android {
 
 dependencies {
   implementation project(":library")
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:" + versions.kotlin
+  implementation deps.kotlin.stdlib8
 
-  implementation "androidx.appcompat:appcompat:" + versions.androidx
-  implementation "com.android.support.constraint:constraint-layout:" + versions.constraintLayout
+  implementation deps.support.app_compat
+  implementation deps.support.constraint_layout
 }
 
 apply from: "../spotless.gradle"
