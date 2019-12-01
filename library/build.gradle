@@ -1,7 +1,7 @@
 ext.module_group = "com.afollestad"
 ext.module_name = "library-template-android"
 
-apply from: rootProject.file("android_library_config.gradle")
+apply from: rootProject.file("gradle/android_library_config.gradle")
 
 dependencies {
   api deps.support.app_compat
